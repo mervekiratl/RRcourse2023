@@ -1,0 +1,6 @@
+m_kiratli@rr1:~$ uname -a
+Linux rr1 5.15.0-1030-gcp #37-Ubuntu SMP Tue Feb 14 19:37:08 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux
+m_kiratli@rr1:~$ touch test.txt
+m_kiratli@rr1:~$ ls -l
+total 0
+-rw-rw-r-- 1 m_kiratli m_kiratli 0 Apr 13 14:04 test.txt
