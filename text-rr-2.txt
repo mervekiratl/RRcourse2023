@@ -1,0 +1,248 @@
+Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 5.15.0-1030-gcp x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Thu Apr 20 13:14:34 UTC 2023
+
+  System load:  0.080078125       Processes:             100
+  Usage of /:   34.3% of 9.51GB   Users logged in:       0
+  Memory usage: 26%               IPv4 address for ens4: 10.186.0.2
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+ * Introducing Expanded Security Maintenance for Applications.
+   Receive updates to over 25,000 software packages with your
+   Ubuntu Pro subscription. Free for personal use.
+
+     https://ubuntu.com/gcp/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+23 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+*** System restart required ***
+Last login: Thu Apr 13 14:03:48 2023 from 35.235.244.98
+m_kiratli@rr1:~$ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root       9.6G  3.3G  6.3G  35% /
+tmpfs           483M     0  483M   0% /dev/shm
+tmpfs           194M  964K  193M   1% /run
+tmpfs           5.0M     0  5.0M   0% /run/lock
+/dev/sda15      105M  6.1M   99M   6% /boot/efi
+tmpfs            97M  4.0K   97M   1% /run/user/1001
+m_kiratli@rr1:~$ ls -l
+total 0
+-rw-rw-r-- 1 m_kiratli m_kiratli 0 Apr 13 14:04 test.txt
+m_kiratli@rr1:~$ ls -l
+total 0
+-rw-rw-r-- 1 m_kiratli m_kiratli 0 Apr 13 14:04 test.txt
+m_kiratli@rr1:~$ nano scrip.
+m_kiratli@rr1:~$ nano test.sh
+m_kiratli@rr1:~$ cd /Users/mervekiratli/Desktop/ReproducibleResearch/RR2
+-bash: cd: /Users/mervekiratli/Desktop/ReproducibleResearch/RR2: No such file or directory
+m_kiratli@rr1:~$ cd /Users/mervekiratli/Desktop/ReproducibleResearch
+-bash: cd: /Users/mervekiratli/Desktop/ReproducibleResearch: No such file or directory
+m_kiratli@rr1:~$ cd /Desktop/ReproducibleResearch
+-bash: cd: /Desktop/ReproducibleResearch: No such file or directory
+m_kiratli@rr1:~$ cd /Users/mervekiratli/Desktop/ReproducibleResearch
+-bash: cd: /Users/mervekiratli/Desktop/ReproducibleResearch: No such file or directory
+m_kiratli@rr1:~$ cd /Users/mervekiratli/Desktop/ReproducibleResearch
+-bash: cd: /Users/mervekiratli/Desktop/ReproducibleResearch: No such file or directory
+m_kiratli@rr1:~$ cd ..
+m_kiratli@rr1:/home$ pwd
+/home
+m_kiratli@rr1:/home$ /home/Desktop
+-bash: /home/Desktop: No such file or directory
+m_kiratli@rr1:/home$ cd home/Desktop
+-bash: cd: home/Desktop: No such file or directory
+m_kiratli@rr1:/home$ cd home/ReproducibleResearch
+-bash: cd: home/ReproducibleResearch: No such file or directory
+m_kiratli@rr1:/home$ mkdir RR2
+mkdir: cannot create directory ‘RR2’: Permission denied
+m_kiratli@rr1:/home$ ls
+m_kiratli  ubuntu
+m_kiratli@rr1:/home$ ls -l
+total 8
+drwxr-x--- 5 m_kiratli m_kiratli 4096 Apr 20 13:26 m_kiratli
+drwxr-x--- 3 ubuntu    ubuntu    4096 Apr 13 13:57 ubuntu
+m_kiratli@rr1:/home$ sido
+Command 'sido' not found, did you mean:
+  command 'sudo' from deb sudo (1.9.9-1ubuntu2.4)
+  command 'sudo' from deb sudo-ldap (1.9.9-1ubuntu2.4)
+Try: apt install <deb name>
+m_kiratli@rr1:/home$ sudo
+usage: sudo -h | -K | -k | -V
+usage: sudo -v [-ABknS] [-g group] [-h host] [-p prompt] [-u user]
+usage: sudo -l [-ABknS] [-g group] [-h host] [-p prompt] [-U user] [-u user] [command]
+usage: sudo [-ABbEHknPS] [-r role] [-t type] [-C num] [-D directory] [-g group] [-h host] [-p prompt] [-R directory] [-T timeout] [-u user] [VAR=value] [-i|-s] [<command>]
+usage: sudo -e [-ABknS] [-r role] [-t type] [-C num] [-D directory] [-g group] [-h host] [-p prompt] [-R directory] [-T timeout] [-u user] file ...
+m_kiratli@rr1:/home$ touch file
+touch: cannot touch 'file': Permission denied
+m_kiratli@rr1:/home$ cd 
+m_kiratli@rr1:~$ pwd
+/home/m_kiratli
+m_kiratli@rr1:~$ ps aux | grep cpu
+root          10  0.0  0.0      0     0 ?        I<   Apr13   0:00 [mm_percpu_wq]
+root          18  0.0  0.0      0     0 ?        S    Apr13   0:00 [cpuhp/0]
+root          19  0.0  0.0      0     0 ?        S    Apr13   0:00 [cpuhp/1]
+root       51187  0.0  0.0      0     0 ?        I    06:35   0:01 [kworker/0:0-mm_percpu_wq]
+root       51726  0.0  0.0      0     0 ?        I    08:38   0:02 [kworker/1:1-mm_percpu_wq]
+m_kirat+   52833  0.0  0.2   7004  2224 pts/0    S+   13:40   0:00 grep --color=auto cpu
+m_kiratli@rr1:~$ ifconfig | tail -3
+Command 'ifconfig' not found, but can be installed with:
+apt install net-tools
+Please ask your administrator.
+m_kiratli@rr1:~$ ip | tail -3
+Usage: ip [ OPTIONS ] OBJECT { COMMAND | help }
+       ip [ -force ] -batch filename
+where  OBJECT := { address | addrlabel | fou | help | ila | ioam | l2tp | link |
+                   macsec | maddress | monitor | mptcp | mroute | mrule |
+                   neighbor | neighbour | netconf | netns | nexthop | ntable |
+                   ntbl | route | rule | sr | tap | tcpmetrics |
+                   token | tunnel | tuntap | vrf | xfrm }
+       OPTIONS := { -V[ersion] | -s[tatistics] | -d[etails] | -r[esolve] |
+                    -h[uman-readable] | -iec | -j[son] | -p[retty] |
+                    -f[amily] { inet | inet6 | mpls | bridge | link } |
+                    -4 | -6 | -M | -B | -0 |
+                    -l[oops] { maximum-addr-flush-attempts } | -br[ief] |
+                    -o[neline] | -t[imestamp] | -ts[hort] | -b[atch] [filename] |
+                    -rc[vbuf] [size] | -n[etns] name | -N[umeric] | -a[ll] |
+                    -c[olor]}
+m_kiratli@rr1:~$ ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: ens4: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1460 qdisc mq state UP group default qlen 1000
+    link/ether 42:01:0a:ba:00:02 brd ff:ff:ff:ff:ff:ff
+    altname enp0s4
+    inet 10.186.0.2/32 metric 100 scope global dynamic ens4
+       valid_lft 59378sec preferred_lft 59378sec
+    inet6 fe80::4001:aff:feba:2/64 scope link 
+       valid_lft forever preferred_lft forever
+m_kiratli@rr1:~$ ip a | tail -3
+       valid_lft 59278sec preferred_lft 59278sec
+    inet6 fe80::4001:aff:feba:2/64 scope link 
+       valid_lft forever preferred_lft forever
+m_kiratli@rr1:~$ cd etc/nvme
+-bash: cd: etc/nvme: No such file or directory
+m_kiratli@rr1:~$ cd/nvme
+-bash: cd/nvme: No such file or directory
+m_kiratli@rr1:~$ mkdir rr2
+m_kiratli@rr1:~$ cd ..
+m_kiratli@rr1:/home$ cd
+m_kiratli@rr1:~$ cd rr2
+m_kiratli@rr1:~/rr2$ pwd
+/home/m_kiratli/rr2
+m_kiratli@rr1:~/rr2$ head -3*
+head: invalid trailing option -- *
+Try 'head --help' for more information.
+m_kiratli@rr1:~/rr2$ head -3
+head -3 *
+head -3 *
+ 
+ 
+
+
+m_kiratli@rr1:~/rr2$ 
+m_kiratli@rr1:~/rr2$ head -3 *
+head: cannot open '*' for reading: No such file or directory
+m_kiratli@rr1:~/rr2$ ls -3 
+ls: invalid option -- '3'
+Try 'ls --help' for more information.
+m_kiratli@rr1:~/rr2$ ls | -3
+-3: command not found
+m_kiratli@rr1:~/rr2$ ls
+m_kiratli@rr1:~/rr2$ ls -l
+total 0
+m_kiratli@rr1:~/rr2$ head -3
+cd
+cd
+he
+he
+
+
+m_kiratli@rr1:~/rr2$ 
+m_kiratli@rr1:~/rr2$ cd
+m_kiratli@rr1:~$ head -3
+
+
+
+
+
+
+m_kiratli@rr1:~$ ls -l
+total 4
+drwxrwxr-x 2 m_kiratli m_kiratli 4096 Apr 20 13:49 rr2
+-rw-rw-r-- 1 m_kiratli m_kiratli    0 Apr 13 14:04 test.txt
+m_kiratli@rr1:~$ head -3 test.txt
+m_kiratli@rr1:~$ nano
+m_kiratli@rr1:~$ nano test.txt
+m_kiratli@rr1:~$ head -3 test.txt
+merve
+rr
+234
+m_kiratli@rr1:~$ cd rr2
+m_kiratli@rr1:~/rr2$ nano test.sh
+m_kiratli@rr1:~/rr2$ ls -ls
+total 4
+4 -rw-rw-r-- 1 m_kiratli m_kiratli 46 Apr 20 14:05 test.sh
+m_kiratli@rr1:~/rr2$ pwd
+/home/m_kiratli/rr2
+m_kiratli@rr1:~/rr2$ head -3 test.sh
+"reproducible research"
+course
+literally
+m_kiratli@rr1:~/rr2$ cd /etc
+m_kiratli@rr1:/etc$ cd/nvme
+-bash: cd/nvme: No such file or directory
+m_kiratli@rr1:/etc$ cd nvme
+m_kiratli@rr1:/etc/nvme$ pwd
+/etc/nvme
+m_kiratli@rr1:/etc/nvme$ ls -l
+total 12
+-rw-r--r-- 1 root root 183 Nov  8 12:13 discovery.conf
+-rw-r--r-- 1 root root  37 Mar  2 02:13 hostid
+-rw-r--r-- 1 root root  69 Mar  2 02:13 hostnqn
+m_kiratli@rr1:/etc/nvme$ head -3
+he
+he
+
+
+
+
+m_kiratli@rr1:/etc/nvme$ head -3 test.sh
+head: cannot open 'test.sh' for reading: No such file or directory
+m_kiratli@rr1:/etc/nvme$ nano test.sh
+m_kiratli@rr1:/etc/nvme$ nano test.sh
+m_kiratli@rr1:/etc/nvme$ chmod u+rwx test.sh
+chmod: cannot access 'test.sh': No such file or directory
+m_kiratli@rr1:/etc/nvme$ nano test.sh
+m_kiratli@rr1:/etc/nvme$ chmod +x test.sh
+chmod: cannot access 'test.sh': No such file or directory
+m_kiratli@rr1:/etc/nvme$ nano test.sh
+m_kiratli@rr1:/etc/nvme$ ls -l
+total 12
+-rw-r--r-- 1 root root 183 Nov  8 12:13 discovery.conf
+-rw-r--r-- 1 root root  37 Mar  2 02:13 hostid
+-rw-r--r-- 1 root root  69 Mar  2 02:13 hostnqn
+m_kiratli@rr1:/etc/nvme$ head -3 
+^C
+m_kiratli@rr1:/etc/nvme$ head -3 discovery.conf 
+# Used for extracting default parameters for discovery
+#
+# Example:
+m_kiratli@rr1:/etc/nvme$ 
